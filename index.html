@@ -15,34 +15,43 @@
 
         body {
             font-family: Arial, sans-serif;
-            background: #f8f7f4;
-            color: #202020;
+            background: #f5f0e8;
+            color: #25352d;
             line-height: 1.6;
         }
 
         header {
-            padding: 24px 7%;
+            background: #24352d;
+            color: white;
+            padding: 22px 7%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: white;
-            border-bottom: 1px solid #e5e5e5;
         }
 
         .logo {
-            font-size: 24px;
+            font-family: Georgia, serif;
+            font-size: 25px;
             font-weight: bold;
         }
 
         nav a {
+            color: white;
             text-decoration: none;
-            color: #202020;
             margin-left: 25px;
+            font-size: 14px;
         }
 
         .hero {
+            min-height: 620px;
             padding: 90px 7%;
-            background: #f8f7f4;
+            display: flex;
+            align-items: center;
+            background:
+                linear-gradient(rgba(245,240,232,0.82), rgba(245,240,232,0.92)),
+                url("https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=1800&q=80");
+            background-size: cover;
+            background-position: center;
         }
 
         .hero-content {
@@ -50,53 +59,64 @@
         }
 
         .eyebrow {
-            font-size: 14px;
-            font-weight: bold;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 18px;
+            letter-spacing: 3px;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 20px;
         }
 
         h1 {
-            font-size: clamp(42px, 7vw, 76px);
-            line-height: 1.05;
+            font-family: Georgia, serif;
+            font-size: clamp(45px, 7vw, 78px);
+            line-height: 1.02;
             margin-bottom: 25px;
+            color: #24352d;
         }
 
         .hero p {
             max-width: 650px;
             font-size: 20px;
-            color: #555;
+            color: #536057;
             margin-bottom: 35px;
         }
 
         .button {
             display: inline-block;
-            padding: 15px 28px;
-            background: #202020;
+            background: #24352d;
             color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
+            padding: 16px 30px;
             border: none;
-            cursor: pointer;
+            border-radius: 3px;
+            text-decoration: none;
             font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            opacity: 0.9;
         }
 
         .section {
-            padding: 80px 7%;
-            background: white;
+            padding: 90px 7%;
+            background: #fffdf9;
         }
 
-        .section h2 {
-            font-size: 38px;
+        .section h2,
+        .form-container h2,
+        .review-container h2 {
+            font-family: Georgia, serif;
+            font-size: 42px;
+            line-height: 1.15;
             margin-bottom: 15px;
+            color: #24352d;
         }
 
         .section-intro {
-            color: #666;
+            color: #68716b;
             max-width: 650px;
-            margin-bottom: 40px;
+            margin-bottom: 45px;
         }
 
         .steps {
@@ -106,48 +126,45 @@
         }
 
         .step {
-            border: 1px solid #ddd;
-            padding: 30px;
-            border-radius: 8px;
+            padding: 32px;
+            border: 1px solid #ddd5c9;
+            background: #f8f4ed;
         }
 
         .step-number {
-            font-size: 14px;
+            color: #9a7b45;
             font-weight: bold;
             margin-bottom: 15px;
         }
 
         .step h3 {
-            font-size: 22px;
+            font-family: Georgia, serif;
+            font-size: 23px;
             margin-bottom: 10px;
         }
 
         .step p {
-            color: #666;
+            color: #68716b;
         }
 
-        /* FORM */
-
-        .form-section {
+        .form-section,
+        .review-section {
             padding: 90px 7%;
-            background: #f1eee8;
+            background: #e9e0d2;
         }
 
-        .form-container {
-            max-width: 800px;
+        .form-container,
+        .review-container {
+            max-width: 850px;
             margin: auto;
-            background: white;
-            padding: 45px;
-            border-radius: 10px;
+            background: #fffdf9;
+            padding: 50px;
+            box-shadow: 0 15px 50px rgba(36,53,45,0.08);
         }
 
-        .form-container h2 {
-            font-size: 40px;
-            margin-bottom: 10px;
-        }
-
-        .form-container > p {
-            color: #666;
+        .form-container > p,
+        .review-container > p {
+            color: #68716b;
             margin-bottom: 35px;
         }
 
@@ -159,17 +176,18 @@
             display: block;
             font-weight: bold;
             margin-bottom: 8px;
+            color: #24352d;
         }
 
         input,
-        textarea,
-        select {
+        textarea {
             width: 100%;
-            padding: 14px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-family: Arial, sans-serif;
+            padding: 15px;
+            border: 1px solid #ccc4b7;
+            background: white;
             font-size: 16px;
+            font-family: Arial, sans-serif;
+            border-radius: 2px;
         }
 
         textarea {
@@ -177,17 +195,61 @@
             resize: vertical;
         }
 
+        input:focus,
+        textarea:focus {
+            outline: 2px solid #9a7b45;
+            border-color: #9a7b45;
+        }
+
         .required {
-            color: #777;
+            color: #888;
+            font-size: 12px;
             font-weight: normal;
-            font-size: 13px;
+        }
+
+        .review-card {
+            border: 1px solid #ddd5c9;
+            margin-bottom: 20px;
+            background: white;
+        }
+
+        .review-label {
+            background: #f0e9de;
+            padding: 12px 18px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+            color: #6e624f;
+        }
+
+        .review-value {
+            padding: 18px;
+            color: #303b35;
+            white-space: pre-wrap;
+        }
+
+        .review-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 35px;
+        }
+
+        .secondary-button {
+            background: transparent;
+            color: #24352d;
+            border: 1px solid #24352d;
+        }
+
+        .hidden {
+            display: none;
         }
 
         footer {
-            padding: 35px 7%;
-            background: #202020;
+            background: #24352d;
             color: white;
             text-align: center;
+            padding: 35px 7%;
         }
 
         @media (max-width: 700px) {
@@ -204,8 +266,17 @@
                 grid-template-columns: 1fr;
             }
 
-            .form-container {
-                padding: 25px;
+            .form-container,
+            .review-container {
+                padding: 28px;
+            }
+
+            .review-buttons {
+                flex-direction: column;
+            }
+
+            .review-buttons .button {
+                text-align: center;
             }
         }
     </style>
@@ -218,7 +289,7 @@
 
     <nav>
         <a href="#how-it-works">How It Works</a>
-        <a href="#about">About</a>
+        <a href="#book-form">Start</a>
     </nav>
 </header>
 
@@ -233,9 +304,9 @@
         <h1>Find the readers who are looking for your book.</h1>
 
         <p>
-            Reader Reach helps authors understand their ideal audience,
-            discover where those readers are, and identify better ways
-            to reach them.
+            Understand your ideal readers, discover where they are,
+            and learn how your book can reach the audience most likely
+            to connect with it.
         </p>
 
         <a href="#book-form" class="button">
@@ -250,39 +321,45 @@
 
 <section class="section" id="how-it-works">
 
-    <h2>How it works</h2>
+    <h2>A clearer path to your readers.</h2>
 
     <p class="section-intro">
-        Tell us about your book. We'll use that information to help
-        you understand the readers most likely to connect with it.
+        Your book already has an audience. Reader Reach helps you
+        understand who they are and how to reach them.
     </p>
 
     <div class="steps">
 
         <div class="step">
             <div class="step-number">01</div>
+
             <h3>Tell us about your book</h3>
+
             <p>
-                Share your book title, description, genre,
-                intended audience, and where readers can find it.
+                Share the essential information about your book
+                and the readers you believe it is written for.
             </p>
         </div>
 
         <div class="step">
             <div class="step-number">02</div>
+
             <h3>Understand your audience</h3>
+
             <p>
-                Get a clearer picture of the types of readers
-                who may be interested in your book.
+                We organize your information into a clearer picture
+                of your potential readers.
             </p>
         </div>
 
         <div class="step">
             <div class="step-number">03</div>
+
             <h3>Reach the right readers</h3>
+
             <p>
-                Discover practical ideas for connecting your
-                book with the audience it was written for.
+                Discover practical opportunities for connecting
+                your book with the people most likely to care about it.
             </p>
         </div>
 
@@ -291,95 +368,103 @@
 </section>
 
 
-<!-- AUTHOR FORM -->
+<!-- BOOK FORM -->
 
 <section class="form-section" id="book-form">
 
     <div class="form-container">
 
-        <h2>Tell us about your book</h2>
+        <div class="eyebrow">Step 1</div>
+
+        <h2>Tell us about your book.</h2>
 
         <p>
-            Start by giving us some information about your book.
+            Give us the information below so we can understand
+            your book and its potential audience.
         </p>
 
-        <form>
+        <form id="bookForm">
 
             <div class="form-group">
+
                 <label for="title">
                     Book Title
-                    <span class="required">(required)</span>
+                    <span class="required">Required</span>
                 </label>
 
                 <input
                     type="text"
                     id="title"
-                    name="title"
                     placeholder="Enter your book title"
                     required
                 >
+
             </div>
 
 
             <div class="form-group">
+
                 <label for="description">
                     Book Description
-                    <span class="required">(required)</span>
+                    <span class="required">Required</span>
                 </label>
 
                 <textarea
                     id="description"
-                    name="description"
                     placeholder="Tell us what your book is about"
                     required
                 ></textarea>
+
             </div>
 
 
             <div class="form-group">
+
                 <label for="genre">
                     Genre / Topic
-                    <span class="required">(required)</span>
+                    <span class="required">Required</span>
                 </label>
 
                 <input
                     type="text"
                     id="genre"
-                    name="genre"
                     placeholder="Example: Romance, Mystery, Business"
                     required
                 >
+
             </div>
 
 
             <div class="form-group">
+
                 <label for="audience">
                     Who do you believe this book is for?
-                    <span class="required">(required)</span>
+                    <span class="required">Required</span>
                 </label>
 
                 <textarea
                     id="audience"
-                    name="audience"
                     placeholder="Describe the readers you believe would enjoy your book"
                     required
                 ></textarea>
+
             </div>
 
 
             <div class="form-group">
+
                 <label for="availability">
                     Where is your book currently available?
-                    <span class="required">(required)</span>
+                    <span class="required">Required</span>
                 </label>
 
                 <input
                     type="text"
                     id="availability"
-                    name="availability"
                     placeholder="Example: Amazon, Kobo, bookstore, author's website"
                     required
                 >
+
             </div>
 
 
@@ -394,9 +479,146 @@
 </section>
 
 
-<footer id="about">
+<!-- REVIEW PAGE -->
+
+<section class="review-section hidden" id="review">
+
+    <div class="review-container">
+
+        <div class="eyebrow">Step 2</div>
+
+        <h2>Review your book information.</h2>
+
+        <p>
+            Please make sure everything below is correct before
+            continuing to the next step.
+        </p>
+
+
+        <div class="review-card">
+
+            <div class="review-label">
+                Book Title
+            </div>
+
+            <div class="review-value" id="reviewTitle"></div>
+
+        </div>
+
+
+        <div class="review-card">
+
+            <div class="review-label">
+                Book Description
+            </div>
+
+            <div class="review-value" id="reviewDescription"></div>
+
+        </div>
+
+
+        <div class="review-card">
+
+            <div class="review-label">
+                Genre / Topic
+            </div>
+
+            <div class="review-value" id="reviewGenre"></div>
+
+        </div>
+
+
+        <div class="review-card">
+
+            <div class="review-label">
+                Intended Readers
+            </div>
+
+            <div class="review-value" id="reviewAudience"></div>
+
+        </div>
+
+
+        <div class="review-card">
+
+            <div class="review-label">
+                Where the Book Is Available
+            </div>
+
+            <div class="review-value" id="reviewAvailability"></div>
+
+        </div>
+
+
+        <div class="review-buttons">
+
+            <a
+                href="#book-form"
+                class="button secondary-button"
+            >
+                ← Edit Information
+            </a>
+
+            <button
+                class="button"
+                onclick="continueToReport()"
+            >
+                Continue →
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
     <p>© 2026 Reader Reach. All rights reserved.</p>
 </footer>
+
+
+<script>
+
+    const form = document.getElementById("bookForm");
+
+    form.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        document.getElementById("reviewTitle").textContent =
+            document.getElementById("title").value;
+
+        document.getElementById("reviewDescription").textContent =
+            document.getElementById("description").value;
+
+        document.getElementById("reviewGenre").textContent =
+            document.getElementById("genre").value;
+
+        document.getElementById("reviewAudience").textContent =
+            document.getElementById("audience").value;
+
+        document.getElementById("reviewAvailability").textContent =
+            document.getElementById("availability").value;
+
+        document.getElementById("review").classList.remove("hidden");
+
+        document.getElementById("review").scrollIntoView({
+            behavior: "smooth"
+        });
+
+    });
+
+
+    function continueToReport() {
+
+        alert(
+            "The next step will be the Reader Reach Report and payment page. We will build that next."
+        );
+
+    }
+
+</script>
 
 </body>
 </html>
