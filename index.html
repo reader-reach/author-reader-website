@@ -576,7 +576,160 @@
 <footer>
     <p>© 2026 Reader Reach. All rights reserved.</p>
 </footer>
+<!-- READER REACH REPORT PAGE -->
 
+<section id="report" class="hidden" style="
+    padding: 90px 7%;
+    background: #f5f0e8;
+">
+
+    <div style="
+        max-width: 900px;
+        margin: auto;
+        background: #fffdf9;
+        padding: 55px;
+        box-shadow: 0 15px 50px rgba(36,53,45,0.10);
+    ">
+
+        <div class="eyebrow">Your Next Step</div>
+
+        <h2 style="
+            font-family: Georgia, serif;
+            font-size: 48px;
+            line-height: 1.15;
+            color: #24352d;
+            margin-bottom: 18px;
+        ">
+            Discover Your Reader Reach
+        </h2>
+
+        <p style="
+            font-size: 19px;
+            color: #68716b;
+            max-width: 700px;
+            margin-bottom: 45px;
+        ">
+            A personalized report designed to help you understand
+            the readers most likely to connect with your book —
+            and discover practical ways to reach them.
+        </p>
+
+        <div style="
+            border-top: 1px solid #ddd5c9;
+            padding-top: 35px;
+        ">
+
+            <h3 style="
+                font-family: Georgia, serif;
+                font-size: 30px;
+                color: #24352d;
+                margin-bottom: 25px;
+            ">
+                Your Reader Reach Report includes:
+            </h3>
+
+            <div style="
+                display: grid;
+                gap: 18px;
+            ">
+
+                <div style="padding:22px;background:#f8f4ed;border-left:4px solid #9a7b45;">
+                    <strong>01 — Ideal Reader Profile</strong>
+                    <p style="color:#68716b;margin-top:6px;">
+                        Understand the readers most likely to connect with your book.
+                    </p>
+                </div>
+
+                <div style="padding:22px;background:#f8f4ed;border-left:4px solid #9a7b45;">
+                    <strong>02 — Reader Segments</strong>
+                    <p style="color:#68716b;margin-top:6px;">
+                        Discover specific groups of readers who may be interested in your book.
+                    </p>
+                </div>
+
+                <div style="padding:22px;background:#f8f4ed;border-left:4px solid #9a7b45;">
+                    <strong>03 — Reader Discovery</strong>
+                    <p style="color:#68716b;margin-top:6px;">
+                        Explore interests, topics and discovery opportunities connected to your audience.
+                    </p>
+                </div>
+
+                <div style="padding:22px;background:#f8f4ed;border-left:4px solid #9a7b45;">
+                    <strong>04 — Where to Reach Them</strong>
+                    <p style="color:#68716b;margin-top:6px;">
+                        Identify potential platforms, communities and channels where your readers may be found.
+                    </p>
+                </div>
+
+                <div style="padding:22px;background:#f8f4ed;border-left:4px solid #9a7b45;">
+                    <strong>05 — How to Reach Them</strong>
+                    <p style="color:#68716b;margin-top:6px;">
+                        Get practical ideas for connecting with your potential readers.
+                    </p>
+                </div>
+
+                <div style="padding:22px;background:#f8f4ed;border-left:4px solid #9a7b45;">
+                    <strong>06 — Book Positioning</strong>
+                    <p style="color:#68716b;margin-top:6px;">
+                        Discover ways to present your book to the audience most likely to care about it.
+                    </p>
+                </div>
+
+                <div style="padding:22px;background:#f8f4ed;border-left:4px solid #9a7b45;">
+                    <strong>07 — Reader Reach Action Plan</strong>
+                    <p style="color:#68716b;margin-top:6px;">
+                        Receive practical next steps you can take to begin reaching your potential readers.
+                    </p>
+                </div>
+
+            </div>
+
+            <div style="
+                margin-top:45px;
+                padding:35px;
+                background:#24352d;
+                color:white;
+                text-align:center;
+            ">
+
+                <div style="
+                    font-family:Georgia,serif;
+                    font-size:30px;
+                    margin-bottom:10px;
+                ">
+                    Reader Reach Report
+                </div>
+
+                <div style="
+                    font-size:42px;
+                    font-weight:bold;
+                    margin-bottom:10px;
+                ">
+                    $50
+                </div>
+
+                <p style="
+                    opacity:0.85;
+                    margin-bottom:25px;
+                ">
+                    One personalized Reader Reach Report
+                </p>
+
+                <button
+                    class="button"
+                    style="background:#fffdf9;color:#24352d;"
+                    onclick="goToPayment()"
+                >
+                    Continue to Payment →
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
 <script>
 
@@ -610,13 +763,15 @@
     });
 
 
-    function continueToReport() {
+function continueToReport() {
 
-        alert(
-            "The next step will be the Reader Reach Report and payment page. We will build that next."
-        );
+    document.getElementById("report").classList.remove("hidden");
 
-    }
+    document.getElementById("report").scrollIntoView({
+        behavior: "smooth"
+    });
+
+}
 
 </script>
 
