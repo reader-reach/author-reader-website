@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Reader Reach | Find Your Readers</title>
 
     <style>
@@ -31,21 +32,17 @@
         .logo {
             font-size: 24px;
             font-weight: bold;
-            letter-spacing: -0.5px;
         }
 
         nav a {
             text-decoration: none;
             color: #202020;
             margin-left: 25px;
-            font-size: 15px;
         }
 
         .hero {
-            min-height: 75vh;
-            display: flex;
-            align-items: center;
-            padding: 70px 7%;
+            padding: 90px 7%;
+            background: #f8f7f4;
         }
 
         .hero-content {
@@ -63,7 +60,6 @@
         h1 {
             font-size: clamp(42px, 7vw, 76px);
             line-height: 1.05;
-            letter-spacing: -2px;
             margin-bottom: 25px;
         }
 
@@ -82,6 +78,9 @@
             text-decoration: none;
             border-radius: 5px;
             font-weight: bold;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
         }
 
         .section {
@@ -127,6 +126,63 @@
             color: #666;
         }
 
+        /* FORM */
+
+        .form-section {
+            padding: 90px 7%;
+            background: #f1eee8;
+        }
+
+        .form-container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 45px;
+            border-radius: 10px;
+        }
+
+        .form-container h2 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .form-container > p {
+            color: #666;
+            margin-bottom: 35px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+        }
+
+        textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .required {
+            color: #777;
+            font-weight: normal;
+            font-size: 13px;
+        }
+
         footer {
             padding: 35px 7%;
             background: #202020;
@@ -144,13 +200,12 @@
                 margin: 0 8px;
             }
 
-            .hero {
-                min-height: auto;
-                padding: 70px 7%;
-            }
-
             .steps {
                 grid-template-columns: 1fr;
+            }
+
+            .form-container {
+                padding: 25px;
             }
         }
     </style>
@@ -167,6 +222,9 @@
     </nav>
 </header>
 
+
+<!-- HOMEPAGE -->
+
 <section class="hero">
     <div class="hero-content">
 
@@ -180,10 +238,15 @@
             to reach them.
         </p>
 
-        <a href="#start" class="button">Discover Your Readers</a>
+        <a href="#book-form" class="button">
+            Start Your Book Analysis
+        </a>
 
     </div>
 </section>
+
+
+<!-- HOW IT WORKS -->
 
 <section class="section" id="how-it-works">
 
@@ -200,8 +263,8 @@
             <div class="step-number">01</div>
             <h3>Tell us about your book</h3>
             <p>
-                Share your book title, description, genre, intended
-                audience, and where readers can find it.
+                Share your book title, description, genre,
+                intended audience, and where readers can find it.
             </p>
         </div>
 
@@ -209,8 +272,8 @@
             <div class="step-number">02</div>
             <h3>Understand your audience</h3>
             <p>
-                Get a clearer picture of the types of readers who
-                may be interested in your book.
+                Get a clearer picture of the types of readers
+                who may be interested in your book.
             </p>
         </div>
 
@@ -218,8 +281,8 @@
             <div class="step-number">03</div>
             <h3>Reach the right readers</h3>
             <p>
-                Discover practical ideas for connecting your book
-                with the audience it was written for.
+                Discover practical ideas for connecting your
+                book with the audience it was written for.
             </p>
         </div>
 
@@ -227,17 +290,109 @@
 
 </section>
 
-<section class="section" id="start">
 
-    <h2>Ready to discover your readers?</h2>
+<!-- AUTHOR FORM -->
 
-    <p class="section-intro">
-        Start by telling us a little about your book.
-    </p>
+<section class="form-section" id="book-form">
 
-    <a href="#" class="button">Start Your Book Analysis</a>
+    <div class="form-container">
+
+        <h2>Tell us about your book</h2>
+
+        <p>
+            Start by giving us some information about your book.
+        </p>
+
+        <form>
+
+            <div class="form-group">
+                <label for="title">
+                    Book Title
+                    <span class="required">(required)</span>
+                </label>
+
+                <input
+                    type="text"
+                    id="title"
+                    name="title"
+                    placeholder="Enter your book title"
+                    required
+                >
+            </div>
+
+
+            <div class="form-group">
+                <label for="description">
+                    Book Description
+                    <span class="required">(required)</span>
+                </label>
+
+                <textarea
+                    id="description"
+                    name="description"
+                    placeholder="Tell us what your book is about"
+                    required
+                ></textarea>
+            </div>
+
+
+            <div class="form-group">
+                <label for="genre">
+                    Genre / Topic
+                    <span class="required">(required)</span>
+                </label>
+
+                <input
+                    type="text"
+                    id="genre"
+                    name="genre"
+                    placeholder="Example: Romance, Mystery, Business"
+                    required
+                >
+            </div>
+
+
+            <div class="form-group">
+                <label for="audience">
+                    Who do you believe this book is for?
+                    <span class="required">(required)</span>
+                </label>
+
+                <textarea
+                    id="audience"
+                    name="audience"
+                    placeholder="Describe the readers you believe would enjoy your book"
+                    required
+                ></textarea>
+            </div>
+
+
+            <div class="form-group">
+                <label for="availability">
+                    Where is your book currently available?
+                    <span class="required">(required)</span>
+                </label>
+
+                <input
+                    type="text"
+                    id="availability"
+                    name="availability"
+                    placeholder="Example: Amazon, Kobo, bookstore, author's website"
+                    required
+                >
+            </div>
+
+
+            <button type="submit" class="button">
+                Continue
+            </button>
+
+        </form>
+
+    </div>
 
 </section>
+
 
 <footer id="about">
     <p>© 2026 Reader Reach. All rights reserved.</p>
