@@ -1,1 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reader Reach | Find Your Readers</title>
 
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8f7f4;
+            color: #202020;
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 24px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: -0.5px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #202020;
+            margin-left: 25px;
+            font-size: 15px;
+        }
+
+        .hero {
+            min-height: 75vh;
+            display: flex;
+            align-items: center;
+            padding: 70px 7%;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .eyebrow {
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 18px;
+        }
+
+        h1 {
+            font-size: clamp(42px, 7vw, 76px);
+            line-height: 1.05;
+            letter-spacing: -2px;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            max-width: 650px;
+            font-size: 20px;
+            color: #555;
+            margin-bottom: 35px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 28px;
+            background: #202020;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .section {
+            padding: 80px 7%;
+            background: white;
+        }
+
+        .section h2 {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .section-intro {
+            color: #666;
+            max-width: 650px;
+            margin-bottom: 40px;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .step {
+            border: 1px solid #ddd;
+            padding: 30px;
+            border-radius: 8px;
+        }
+
+        .step-number {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .step h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .step p {
+            color: #666;
+        }
+
+        footer {
+            padding: 35px 7%;
+            background: #202020;
+            color: white;
+            text-align: center;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+
+            .hero {
+                min-height: auto;
+                padding: 70px 7%;
+            }
+
+            .steps {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Reader Reach</div>
+
+    <nav>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#about">About</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+
+        <div class="eyebrow">For Authors</div>
+
+        <h1>Find the readers who are looking for your book.</h1>
+
+        <p>
+            Reader Reach helps authors understand their ideal audience,
+            discover where those readers are, and identify better ways
+            to reach them.
+        </p>
+
+        <a href="#start" class="button">Discover Your Readers</a>
+
+    </div>
+</section>
+
+<section class="section" id="how-it-works">
+
+    <h2>How it works</h2>
+
+    <p class="section-intro">
+        Tell us about your book. We'll use that information to help
+        you understand the readers most likely to connect with it.
+    </p>
+
+    <div class="steps">
+
+        <div class="step">
+            <div class="step-number">01</div>
+            <h3>Tell us about your book</h3>
+            <p>
+                Share your book title, description, genre, intended
+                audience, and where readers can find it.
+            </p>
+        </div>
+
+        <div class="step">
+            <div class="step-number">02</div>
+            <h3>Understand your audience</h3>
+            <p>
+                Get a clearer picture of the types of readers who
+                may be interested in your book.
+            </p>
+        </div>
+
+        <div class="step">
+            <div class="step-number">03</div>
+            <h3>Reach the right readers</h3>
+            <p>
+                Discover practical ideas for connecting your book
+                with the audience it was written for.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section" id="start">
+
+    <h2>Ready to discover your readers?</h2>
+
+    <p class="section-intro">
+        Start by telling us a little about your book.
+    </p>
+
+    <a href="#" class="button">Start Your Book Analysis</a>
+
+</section>
+
+<footer id="about">
+    <p>© 2026 Reader Reach. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
